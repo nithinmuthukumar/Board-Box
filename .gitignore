@@ -1,0 +1,70 @@
+############################
+# Godot 4
+############################
+
+# Godot import cache
+.import/
+.godot/
+
+# Export templates & builds
+export_presets.cfg
+*.pck
+*.zip
+*.apk
+*.aab
+*.exe
+*.app
+*.x86_64
+*.x86
+*.wasm
+
+# Mono / C# builds
+.mono/
+bin/
+obj/
+
+############################
+# IDE / Editor
+############################
+
+# VSCode
+.vscode/
+
+# JetBrains (Rider, IntelliJ, etc.)
+.idea/
+
+# Visual Studio
+*.csproj.user
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+############################
+# macOS
+############################
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+############################
+# Windows
+############################
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+############################
+# Logs
+############################
+
+*.log
