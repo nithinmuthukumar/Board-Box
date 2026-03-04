@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dt8hp5d871un4"]
+
+[ext_resource type="PackedScene" uid="uid://bhbvtfqk02t3u" path="res://Prefabs/Player.tscn" id="1_r150o"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_idj7w"]
+
+[node name="Node3D" type="Node3D" unique_id=1323139600]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1144393456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02764535, 0.2225709, -2.650646)
+mesh = SubResource("SphereMesh_idj7w")
+
+[node name="Player" parent="." unique_id=621401470 instance=ExtResource("1_r150o")]
