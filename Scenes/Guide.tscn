@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://diu48cf1frfld"]
+
+[ext_resource type="Script" uid="uid://c5pqwfny4wq2p" path="res://button.gd" id="1_3x2xl"]
+
+[node name="Node2D" type="Node2D" unique_id=710401165]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=852083472]
+offset_right = 410.0
+offset_bottom = 256.0
+text = "How to play:
+Pick up board game pieces with []
+Put them in the correct box with [].
+Grab new boxes by [].
+
+
+
+
+Survive the horrors."
+
+[node name="Button" type="Button" parent="." unique_id=591322700]
+offset_left = 310.0
+offset_top = 156.0
+offset_right = 410.0
+offset_bottom = 256.0
+text = "Back"
+script = ExtResource("1_3x2xl")

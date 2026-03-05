@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://w6oobc32nf5"]
+
+[node name="Credits" type="Node2D" unique_id=515071319]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=436994244]
+offset_right = 334.0
+offset_bottom = 274.0
+text = "Credits:
+Programmers:
+
+Artists:
+
+Musicians:
+
+"
