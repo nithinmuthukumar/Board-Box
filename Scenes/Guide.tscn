@@ -7,15 +7,21 @@
 [node name="TextEdit" type="TextEdit" parent="." unique_id=852083472]
 offset_right = 410.0
 offset_bottom = 256.0
+theme_override_font_sizes/font_size = 18
 text = "How to play:
-Pick up board game pieces with []
-Put them in the correct box with [].
-Grab new boxes by [].
+Grab items and boxes with [E]
 
+Put the game pieces in their boxes.
 
-
+Toggle the flashlight with [Q]
 
 Survive the horrors."
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+wrap_mode = 1
+indent_wrapped_lines = true
+virtual_keyboard_enabled = false
 
 [node name="Button" type="Button" parent="." unique_id=591322700]
 offset_left = 310.0

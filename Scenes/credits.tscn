@@ -7,14 +7,18 @@
 [node name="TextEdit" type="TextEdit" parent="." unique_id=436994244]
 offset_right = 410.0
 offset_bottom = 256.0
-text = "Credits:
-Programmers:
+theme_override_font_sizes/font_size = 14
+text = "Programmers:
+Nithin
+Kinja427
+XiroxNull
 
 Artists:
+Jade and XiroxNull
 
-Musicians:
-
-"
+Musician:
+Nocna_Sowa2246"
+editable = false
 
 [node name="Cred_to_menu" type="Button" parent="." unique_id=811420416]
 offset_left = 310.0
