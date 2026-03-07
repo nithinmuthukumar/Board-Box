@@ -1,13 +1,10 @@
 [gd_scene format=3 uid="uid://dhkbmf8iuqrab"]
 
-[ext_resource type="Script" uid="uid://dmldpw0exxs22" path="res://MainMenu.gd" id="1_28flt"]
-
-[sub_resource type="GDScript" id="GDScript_48xlc"]
-script/source = "extends Button
-"
+[ext_resource type="Script" uid="uid://bpbpy5wntohnl" path="res://Scenes/start.gd" id="1_1ehe0"]
+[ext_resource type="Script" uid="uid://dti8etbd6ml1s" path="res://Scenes/guide.gd" id="2_ce3w2"]
+[ext_resource type="Script" uid="uid://c3tqfvagpxr7s" path="res://Scenes/names.gd" id="3_n45e2"]
 
 [node name="Main Menu" type="Node2D" unique_id=82089096]
-script = ExtResource("1_28flt")
 
 [node name="Start" type="Button" parent="." unique_id=2016924539]
 offset_left = 447.0
@@ -15,7 +12,7 @@ offset_top = 134.0
 offset_right = 764.0
 offset_bottom = 235.0
 text = "Start Game"
-script = SubResource("GDScript_48xlc")
+script = ExtResource("1_1ehe0")
 
 [node name="Guide" type="Button" parent="." unique_id=1308718385]
 offset_left = 447.0
@@ -23,7 +20,7 @@ offset_top = 264.0
 offset_right = 764.0
 offset_bottom = 365.0
 text = "How To Play"
-script = SubResource("GDScript_48xlc")
+script = ExtResource("2_ce3w2")
 
 [node name="Names" type="Button" parent="." unique_id=796407834]
 offset_left = 448.0
@@ -31,4 +28,4 @@ offset_top = 394.0
 offset_right = 765.0
 offset_bottom = 495.0
 text = "Credits"
-script = SubResource("GDScript_48xlc")
+script = ExtResource("3_n45e2")
