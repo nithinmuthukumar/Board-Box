@@ -1,27 +1,13 @@
 [gd_scene format=3 uid="uid://dt8hp5d871un4"]
 
 [ext_resource type="PackedScene" uid="uid://bhbvtfqk02t3u" path="res://Prefabs/Player.tscn" id="1_r150o"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ball"]
-albedo_color = Color(0.8, 0.15, 0.15, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_idj7w"]
-material = SubResource("StandardMaterial3D_ball")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_grab"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
-size = Vector2(20, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_floor"]
-size = Vector3(20, 0.1, 20)
+[ext_resource type="PackedScene" uid="uid://crh3r2emndyo" path="res://Scenes/room.tscn" id="2_idj7w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_main"]
 sky_top_color = Color(0.1, 0.4, 0.8, 1)
-sky_horizon_color = Color(0.6, 0.8, 1.0, 1)
+sky_horizon_color = Color(0.6, 0.8, 1, 1)
 ground_bottom_color = Color(0.15, 0.1, 0.05, 1)
 ground_horizon_color = Color(0.4, 0.35, 0.25, 1)
-sun_angle_max = 30.0
 
 [sub_resource type="Sky" id="Sky_main"]
 sky_material = SubResource("ProceduralSkyMaterial_main")
@@ -42,37 +28,57 @@ transform = Transform3D(1, 0, 0, 0, 0.707, 0.707, 0, -0.707, 0.707, 0, 10, 0)
 light_energy = 1.2
 shadow_enabled = true
 
-[node name="Floor" type="StaticBody3D" parent="." unique_id=1000000001]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1000000002]
-mesh = SubResource("PlaneMesh_floor")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1000000003]
-shape = SubResource("BoxShape3D_floor")
-
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1144393456 groups=["grabbable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02764535, 1.0, -2.650646)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1144393457]
-mesh = SubResource("SphereMesh_idj7w")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1864539680]
-shape = SubResource("SphereShape3D_grab")
-
 [node name="Player" parent="." unique_id=621401470 instance=ExtResource("1_r150o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 grab_prompt_path = NodePath("../CanvasLayer/Label")
+interact_prompt_path = NodePath("../CanvasLayer/InteractLabel")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=803092708]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=300177594]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-visible = false
 text = "Press E to Grab
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="InteractLabel" type="Label" parent="CanvasLayer" unique_id=300177595]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Crosshair" type="Control" parent="CanvasLayer" unique_id=300177596]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="Horizontal" type="ColorRect" parent="CanvasLayer/Crosshair" unique_id=300177597]
+offset_top = 9.0
+offset_right = 20.0
+offset_bottom = 11.0
+color = Color(1, 1, 1, 0.8)
+
+[node name="Vertical" type="ColorRect" parent="CanvasLayer/Crosshair" unique_id=300177598]
+offset_left = 9.0
+offset_right = 11.0
+offset_bottom = 20.0
+color = Color(1, 1, 1, 0.8)
+
+[node name="GameRoomChange" parent="." unique_id=1813052347 instance=ExtResource("2_idj7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6514335, 0)
