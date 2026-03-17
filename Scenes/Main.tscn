@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bhbvtfqk02t3u" path="res://Prefabs/Player.tscn" id="1_r150o"]
 [ext_resource type="PackedScene" uid="uid://crh3r2emndyo" path="res://Scenes/room.tscn" id="2_idj7w"]
+[ext_resource type="PackedScene" uid="uid://br1bdvutpujl0" path="res://Assets/Models/GameRoomChange1.glb" id="3_kln2b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_main"]
 sky_top_color = Color(0.1, 0.4, 0.8, 1)
@@ -59,6 +60,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Crosshair" type="Control" parent="CanvasLayer" unique_id=300177596]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -69,12 +72,14 @@ offset_right = 10.0
 offset_bottom = 10.0
 
 [node name="Horizontal" type="ColorRect" parent="CanvasLayer/Crosshair" unique_id=300177597]
+layout_mode = 0
 offset_top = 9.0
 offset_right = 20.0
 offset_bottom = 11.0
 color = Color(1, 1, 1, 0.8)
 
 [node name="Vertical" type="ColorRect" parent="CanvasLayer/Crosshair" unique_id=300177598]
+layout_mode = 0
 offset_left = 9.0
 offset_right = 11.0
 offset_bottom = 20.0
@@ -82,3 +87,6 @@ color = Color(1, 1, 1, 0.8)
 
 [node name="GameRoomChange" parent="." unique_id=1813052347 instance=ExtResource("2_idj7w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6514335, 0)
+
+[node name="GameRoomChange1" parent="." unique_id=824912567 instance=ExtResource("3_kln2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.597493, 0, 1.2699533)
